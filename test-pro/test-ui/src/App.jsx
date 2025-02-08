@@ -46,6 +46,7 @@ function App() {
         <button className="border-2 bg-purple-400 text-white rounded-xl w-30 h-10">Get Started</button>
         <a href="#">How its work?</a>
       </div>
+      
     </>
   )
 }
