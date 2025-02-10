@@ -10,6 +10,7 @@ function App() {
     {/* in vite we have to name the file extension to jsx and also we have to look at the
     naming convention, we have to look at thier first letter to be capatilize */}
     </>
+    
   )
 }
 
