@@ -8,6 +8,27 @@ function Home() {
 
     const [searchQuery ,setSearchQuery] = useState("");
     const [movies, setMovies] = useState([]);
+    const [error, setError] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+
+    useEffect(()=>{
+        const loadPapoularMovies = async () => {
+            try {
+                const papoularMovies = await getPapoularMovies()
+                setMovies(papoularMovies)
+            } catch(err){
+                console.log(err);
+                setError("Failed to Load Movies")
+            }
+            finally{
+                setLoading(false)
+            }
+        }
+        loadPapoularMovies()
+    }, [])
+
+
 
 
     const handleSearch = (e)=>{
